@@ -11,7 +11,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/students', {
   useUnifiedTopology: true
 }).then(() => console.log("MongoDB connected"));
 
-const studentRoutes = require('./routes/studentRoutes');
+const studentRoutes = require('../routes/studentRoutes');
 app.use('/api/students', studentRoutes);
 
 app.listen(5000, () => console.log("Server running on port 5000"));
